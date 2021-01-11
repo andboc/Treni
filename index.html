@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Creating Twitter Typeahead using JSON Data</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/typeahead.bundle.min.js"></script>
+    <script
+      src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://unpkg.com/gijgo@1.9.13/js/messages/messages.it-it.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link
+      href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="jumbotron"><h1 class="display-4">Orario dei treni</h1></div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h5>Stazione di partenza</h5>
+            <input
+              type="text"
+              class="typeahead tt-query stazionePartenza"
+              autocomplete="off"
+              spellcheck="false"
+              id="stazionePartenza"
+            />
+          </div>
+          <div class="col">
+            <h5>Stazione di arrivo</h5>
+            <input
+              type="text"
+              class="typeahead tt-query stazioneArrivo"
+              autocomplete="off"
+              spellcheck="false"
+              id="stazioneArrivo"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h5>Data partenza</h5>
+            <input id="datepicker" />
+          </div>
+          <div class="col">
+            <h5>Ora partenza</h5>
+            <input type="text" class="oraPartenza" placeholder="hh" />
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col text-center">
+            <button id="cercaTreni" class="btn btn-primary btn-lg">
+              Cerca treni
+            </button>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-12">
+            <div id="risultati"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
